@@ -69,5 +69,37 @@ class DoubleLinkedList {
         }
     }
 
+    deleteNode(element) {
+        if (!element || !this.head) {
+            return "No hay";
+        }
+        let current = this.head;
+        while (current) {
+            if (current.data === element) {
+
+                if (current === this.head) {
+                    this.head = current.next;
+                    if (this.head) {
+                        this.head.prev = null;
+                    }
+                }
+
+                else if (current === this.tail) {
+                    this.tail = current.prev;
+                    if (this.tail) {
+                        this.tail.next = null;
+                    }
+                }
+
+                else {
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+                return "Elemento borrado";
+            }
+            current = current.next;
+        }
+        return "Elemento no encontrado";
+    }
 
 }
