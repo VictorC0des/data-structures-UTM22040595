@@ -116,5 +116,19 @@ class DoubleLinkedList {
 
     }
 
+    deleteTail() {
+        if (!this.tail) {
+            return "No hay cola";
+        }
+        if (this.tail === this.head) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.tail = this.tail.prev;
+            this.tail.next = null;
+        }
+    }
+  
+
 }
 
