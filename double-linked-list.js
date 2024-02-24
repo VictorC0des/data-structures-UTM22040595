@@ -49,4 +49,25 @@ class DoubleLinkedList {
         }
     }
 
+    insertAfterNode(data, newData) {
+        const newNode = new Node(newData);
+        let current = this.head;
+        while (current) {
+            if (current.data === data) {
+                newNode.next = current.next;
+                newNode.prev = current;
+                if (current.next) {
+                    current.next.prev = newNode;
+                }
+                current.next = newNode;
+                if (newNode.next === null) {
+                    this.tail = newNode;
+                }
+                return;
+            }
+            current = current.next;
+        }
+    }
+
+
 }
