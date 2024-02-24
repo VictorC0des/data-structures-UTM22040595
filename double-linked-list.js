@@ -102,4 +102,19 @@ class DoubleLinkedList {
         return "Elemento no encontrado";
     }
 
+    deleteHead() {
+        if (!this.head) {
+            return "No hay head"
+        }
+        this.head = this.head.next
+
+        if (this.head) {
+            this.head.prev = null;
+        } else {
+            this.tail = null;
+        }
+
+    }
+
 }
+
