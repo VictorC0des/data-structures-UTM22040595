@@ -36,7 +36,14 @@ class queue {
         }
     }
 
- 
+    front() {
+        if (this.isEmpty()) {
+            return ("The queue is empty")
+        }
+        else {
+            return this.items[0];
+        }
+    }
 
 }
 
