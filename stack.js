@@ -31,7 +31,7 @@ class stack {
         }
 
         else{
-            return this.items[-1]
+            return this.items[this.items.length - 1]
         }
     }
 }
