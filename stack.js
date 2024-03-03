@@ -16,7 +16,7 @@ class stack {
     }
 
     pop() {
-        if (this.isEmpty) {
+        if (this.isEmpty()) {
             return "The stack is empty"
         }
 
@@ -26,12 +26,21 @@ class stack {
     }
 
     peek(){
-        if(this.isEmpty){
+        if(this.isEmpty()){
             return "The stack is empty"
         }
 
         else{
             return this.items[this.items.length - 1]
+        }
+    }
+
+    size(){
+        if(this.isEmpty()){
+            return "The stack is empty"
+        }
+        else{
+            return this.items.length
         }
     }
 }
