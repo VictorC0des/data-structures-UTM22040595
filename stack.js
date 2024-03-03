@@ -24,4 +24,14 @@ class stack {
             return this.items.pop()
         }
     }
+
+    peek(){
+        if(this.isEmpty){
+            return "The stack is empty"
+        }
+
+        else{
+            return this.items[-1]
+        }
+    }
 }
