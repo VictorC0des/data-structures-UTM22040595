@@ -27,7 +27,16 @@ class queue {
         }
     }
 
-   
+    size() {
+        if (this.isEmpty()) {
+            return ("The queue is empty")
+        }
+        else {
+            return this.items.length
+        }
+    }
+
+ 
 
 }
 
