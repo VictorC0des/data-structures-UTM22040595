@@ -8,7 +8,17 @@ class queue {
 
     }
 
+    dequeue() {
+        if (this.isEmpty()) {
+            return ("The queue is empty")
+        }
+        else {
+            return this.items.shift()
 
+        }
+    }
+
+   
 
 }
 
