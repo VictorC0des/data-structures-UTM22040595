@@ -14,4 +14,14 @@ class stack {
             return false;
         }
     }
+
+    pop() {
+        if (this.isEmpty) {
+            return "The stack is empty"
+        }
+
+        else {
+            return this.items.pop()
+        }
+    }
 }
